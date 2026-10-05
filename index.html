@@ -1,1 +1,102 @@
 
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9issa 9asira</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 40px 20px;
+    background: #f5f5f5;
+}
+
+h1 {
+    margin-bottom: 35px;
+}
+
+button {
+    display: block;
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 18px;
+    font-size: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.audio-btn {
+    background: #222;
+    color: white;
+    border: none;
+}
+
+.text-btn {
+    background: white;
+    color: #222;
+    border: 2px solid #222;
+}
+
+#audioBox, #story {
+    display: none;
+    width: 90%;
+    max-width: 600px;
+    margin: 25px auto;
+    text-align: right;
+    line-height: 1.8;
+}
+
+#story {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>9issa 9asira</h1>
+
+<button class="audio-btn" onclick="showAudio()">
+🔊 القصة مسموعة
+</button>
+
+<button class="text-btn" onclick="showText()">
+📖 القصة مكتوبة
+</button>
+
+<div id="audioBox">
+<audio controls style="width:100%;">
+<source src="WhatsApp%20Ptt%202026-10-05%20at%204.30.48%20AM.ogg" type="audio/ogg">
+المتصفح ديالك ما كيدعمش الصوت.
+</audio>
+</div>
+
+<div id="story">
+<h2>9issa 9asira fach maykon 3ndk maydar</h2>
+
+<p>
+حط هنا النص ديال القصة ديالك.
+</p>
+
+</div>
+
+<script>
+function showAudio() {
+    document.getElementById("audioBox").style.display = "block";
+    document.getElementById("story").style.display = "none";
+}
+
+function showText() {
+    document.getElementById("story").style.display = "block";
+    document.getElementById("audioBox").style.display = "none";
+}
+</script>
+
+</body>
+</html>
